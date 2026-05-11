@@ -32,12 +32,12 @@ public class Experiment {
     public void runTraversals(Graph g) {
         int size = g.getSize();
         System.out.println("=====================================");
-        System.out.println("Тестирование графа размером: " + size + " вершин");
+        System.out.println("graph size: " + size + " vertices");
 
         if (size <= 10) {
-            System.out.println("Структура графа:");
+            System.out.println("graph structure:");
             g.printGraph();
-            System.out.print("Порядок обхода BFS: ");
+            System.out.print("BFS traversal order: ");
         }
 
         long startBfs = System.nanoTime();
@@ -45,7 +45,7 @@ public class Experiment {
         long endBfs = System.nanoTime();
 
         if (size <= 10) {
-            System.out.print("Порядок обхода DFS: ");
+            System.out.print("DFS traversal order: ");
         }
         long startDfs = System.nanoTime();
         g.dfs(0);
@@ -56,6 +56,6 @@ public class Experiment {
         System.out.println();
     }
     public void printResults(String algorithm, int size, long timeNano) {
-        System.out.println("Время выполнения " + algorithm + " (размер " + size + "): " + timeNano + " нс"); // [cite: 71]
+        System.out.println("time" + algorithm + " (size " + size + "): " + timeNano + " ns");
     }
 }

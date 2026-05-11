@@ -23,7 +23,7 @@ public class Graph {
 
     public void printGraph() {
         for (int vertexId : adjacencyList.keySet()) {
-            System.out.print("Вершина " + vertexId + " связана с: ");
+            System.out.print("Vertex" + vertexId + "is connected to:");
             for (Edge edge : adjacencyList.get(vertexId)) {
                 System.out.print(edge.getDestination() + " ");
             }
